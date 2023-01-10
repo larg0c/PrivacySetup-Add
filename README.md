@@ -1,4 +1,14 @@
-# PrivacySetup-Addon
+<p align="center">
+    <img src="https://privacysetup.fr/images/Index/HOME.png"
+        height="200">
+</p>
+<p align="center">
+    <img src="https://img.shields.io/badge/license-MPL%202.0-black" />
+    <img src="https://img.shields.io/badge/version-0.0.1--alpha-brightgreen" />
+</p>
+
+
+# Introduction
 PrivacySetup-Add is an extension create after the web site [privacysetup.fr](https://privacysetup.fr) to upgrade your privacy online.\
 Actually, only one functionality is available: Skipping YouTube to Piped Video.
 
