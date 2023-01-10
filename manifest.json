@@ -1,0 +1,29 @@
+{
+    "manifest_version": 2,
+    "name": "Privacy Setup",
+    "version": "1.0",
+    "description": "Prenez en mains votre vie privé.",
+    "icons": {
+        "48": "img/PS.png"
+    },
+    "permissions": [
+        "activeTab"
+    ],
+    "browser_action": {
+        "default_icon": "img/PS.png",
+        "default_title": "Privacy",
+        "default_popup": "popup/window.html"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "*://*.youtube.com/*",
+                "*://*.youtu.be/*",
+                "*://*.youtube.fr/*"
+            ],
+            "js": [
+                "redirect.js"
+            ]
+        }
+    ]
+}
