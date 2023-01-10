@@ -6,7 +6,9 @@ NB:\
 Only supported by Firefox v108 and more.
 
 ## Visuals 📸
-![PrivacySetup-Add Popup](https://assets.digitalocean.com/articles/alligator/boo.svg "PrivacySetup-Add Popup")
+![PrivacySetup-Add Popup](README-files/PS_popup.png "PrivacySetup-Add Popup")
+![PipedVideo website](README-files/PipedVideo.png "PipedVideo website")
+![PrivacySetup website](README-files/PrivacySetup.png "PrivacySetup website")
 
 ## Installation 💻
 
