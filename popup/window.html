@@ -8,24 +8,83 @@
 </head>
 
 <body>
-    <div class="centrer">
+    <div class="center">
         <img src="../img/PS-96.png" alt="Logo Privacy Setup" width="96" height="96">
     </div>
     <hr>
     <div id="enabled-wrapper" class="b button">
         <a id="toggle" href="https://piped.video/" target="_blank" style="text-decoration: none;color: inherit;">Piped
             Video</a>
-        <label class="switch">
+        <label class="piped_switch">
             <input id="enabled" type="checkbox" />
-            <span class="slider round"></span>
+            <span id="piped_onoff" class="slider round"></span>
         </label>
+
+    </div>
+    <hr>
+    <div class="center">
+        <img src="../img/wormhole.webp" alt="wormhole" width="25" height="25">
     </div>
     <hr>
     <div class="foot">
-        <a id="toggle" href="https://privacysetup.fr/" target="_blank"
+        <a href="https://privacysetup.fr/" target="_blank"
             style="text-decoration: none; color: inherit;">Privacy Setup</a>
     </div>
-    <script src="window-action.js"></script>
+
+
+    <script>
+        var piped_action = true;
+        export { piped_action };
+        // Récupère le bouton
+        var pipedButton = document.getElementById("piped-mode-button");
+
+        // Ajoute un écouteur d'événement pour détecter un clic sur le bouton
+        pipedButton.addEventListener("click", function () {
+            // Récupère la valeur actuelle du cookie "piped_mode"
+            var pipedMode = getCookie("piped_mode");
+
+            // Vérifie si piped_mode est défini
+            if (pipedMode) {
+                // Si oui, vérifie si la valeur est "true"
+                if (pipedMode === "true") {
+                    // Si oui, change la valeur du cookie en "false"
+                    setCookie("piped_mode", "false", 365);
+                    // Change le texte du bouton pour indiquer que le mode est désactivé
+                    pipedButton.innerHTML = "Désactivé";
+                } else {
+                    // Sinon, change la valeur du cookie en "true"
+                    setCookie("piped_mode", "true", 365);
+                    // Change le texte du bouton pour indiquer que le mode est activé
+                    pipedButton.innerHTML = "Activé";
+                }
+            } else {
+                // Si piped_mode n'est pas défini, crée un cookie avec la valeur "true"
+                setCookie("piped_mode", "true", 365);
+                // Change le texte du bouton pour indiquer que le mode est activé
+                pipedButton.innerHTML = "Activé";
+            }
+        });
+
+        // Fonction pour récupérer la valeur d'un cookie
+        function getCookie(name) {
+            var value = "; " + document.cookie;
+            var parts = value.split("; " + name + "=");
+            if (parts.length == 2) return parts.pop().split(";").shift();
+        }
+
+        // Fonction pour définir un cookie
+        function setCookie(name, value, days) {
+            var expires = "";
+            if (days) {
+                var date = new Date();
+                date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+                expires = "; expires=" + date.toUTCString();
+            }
+            document.cookie = name + "=" + (value || "") + expires + "; path=/";
+        }
+    </script>
+
+    <!--<script src="window-action.js"></script>-->
 </body>
 
 </html>
