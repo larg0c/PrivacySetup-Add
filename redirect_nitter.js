@@ -9,7 +9,8 @@
     let path = parser.pathname; // => "/pathname/"
     let search = parser.search;   // => "?search=test"
     let hash = parser.hash;     // => "#hash"
-    let url = 'https://piped.video';
+    
+    let url = 'https://nitter.net';
 
     let new_url = url.concat(path, search, hash);
     location.href = new_url;

@@ -5,7 +5,7 @@
 <p align="center">
     <img src="https://img.shields.io/badge/license-MPL%202.0-black" />
     <img src="https://img.shields.io/badge/version-0.1.2--alpha-brightgreen" />
-</p>
+</p>s
 
 
 # Introduction

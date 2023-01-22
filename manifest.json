@@ -19,12 +19,24 @@
             "all_frames": true,
             "run_at": "document_start",
             "matches": [
-                "*://*.youtube.com/*",
-                "*://*.youtu.be/*",
-                "*://*.youtube.fr/*"
+                "*://youtube.com/*",
+                "*://youtu.be/*",
+                "*://youtube.fr/*"
             ],
             "js": [
-                "redirect.js"
+                "redirect_piped.js"
+            ]
+        },
+        {
+            "all_frames": true,
+            "run_at": "document_start",
+            "matches": [
+                "*://www.twitter.com/*",
+                "*://twitter.com/*",
+                "*://*.t.co/*"
+            ],
+            "js": [
+                "redirect_nitter.js"
             ]
         }
     ]
