@@ -1,7 +1,7 @@
 {
     "manifest_version": 2,
     "name": "Privacy Setup",
-    "version": "0.2.0",
+    "version": "0.3.0",
     "description": "Prenez en mains votre vie privé.",
     "icons": {
         "48": "img/PSV_48.png",
@@ -30,18 +30,6 @@
             ],
             "js": [
                 "redirect_piped.js"
-            ]
-        },
-        {
-            "all_frames": true,
-            "run_at": "document_start",
-            "matches": [
-                "*://www.twitter.com/*",
-                "*://twitter.com/*",
-                "*://*.t.co/*"
-            ],
-            "js": [
-                "redirect_nitter.js"
             ]
         }
     ]
